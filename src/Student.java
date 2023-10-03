@@ -14,7 +14,7 @@ public class Student {
         this.gradYear = gradYear;
         accumulatedTestScores = 0.0;
         testScoreCount = 0;
-
+        highestTestScore = 0.0;
     }
 
     /* Getter Methods */
@@ -26,6 +26,9 @@ public class Student {
     // Returns lastName
     public String getLastName() {
         return lastName;
+    }
+    public double getHighestTestScore() {
+        return highestTestScore;
     }
     /* Setter Methods */
 // Sets gradYear to newGradYear
@@ -60,17 +63,16 @@ public class Student {
         return accumulatedTestScores / testScoreCount;
     }
 
+
     // this method prints the students full name, grad year, test average,
 // and whether they are passing (see Note 3 below)
     public void printStudentInfo() {
-        System.out.println("Student Full Name: " + getFirstName() + " " + getLastName() );
+        System.out.println("Student Full Name: " + firstName + " " + lastName );
         System.out.println("Graduation Year: " + gradYear);
         System.out.println("Number of Tests: " + testScoreCount);
         System.out.println("Average Test Score: " + averageTestScore());
-        System.out.println("Highest Test Score: " + getHighestTestScore());
+        System.out.println("Highest Test Score: " + highestTestScore);
         System.out.println("Is Passing: " + isPassing());
     }
-    public double getHighestTestScore() {
-        return highestTestScore;
-    }
+
 }
